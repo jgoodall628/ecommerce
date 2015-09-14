@@ -1,0 +1,65 @@
+<h1>Welcome to Tech Talent Store!</h1>
+<p>
+  Give us your money!
+</p>
+<div class="row">
+  <% @products.each do |product| %>
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="" style="height: 150px;">
+          <%= image_tag product.image.url(:medium), class:"center-block img-responsive" %>
+
+        </div>
+        <p>
+          <%= link_to("#", {'data-toggle' => "modal", 'data-target' =>"#myModal_#{product.id}"}) do %>
+          <span class="glyphicon glyphicon-plus"></span> quick info
+          <% end %>
+        </p>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal_<%= product.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel"><%= product.name %></h4>
+              </div>
+              <div class="modal-body">
+                <p>
+                  <%= product.price %>
+                </p>
+                <p>
+                  <%= product.description %>
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>
+          <strong><%= number_to_currency product.price %></strong>
+        </p>
+        <p>
+          <%= product.name %>
+        </p>
+        <div class="" style="height:150px;">
+          <p>
+            <%= product.description %>
+          </p>
+        </div>
+        <p>
+          Made by: <%= product.brand %>
+        </p>
+        <p>
+          <!-- <% product.rating.times do %>
+          <span class="glyphicon glyphicon-star yellow"></span>
+          <% end %> -->
+        </p>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
