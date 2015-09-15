@@ -26,6 +26,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'paperclip'
 gem 'cancancan'
+
+
+gem 'sunspot_rails'
+gem 'sunspot_solr'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

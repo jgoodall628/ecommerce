@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+body {
+  background: image-url("electronic-bg.jpg") no-repeat;
+  background-size: cover;
+  color: white;
+}
+.panel-default {
+  background: rgba(255, 255, 255, 0.85);
+  color: black;
+}
