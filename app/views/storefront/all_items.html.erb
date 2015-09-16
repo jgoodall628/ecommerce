@@ -49,9 +49,17 @@
             <%= product.description %>
           </p>
         </div>
-        <p>
-          Made by: <%= product.brand %>
-        </p>
+        <div class="row">
+          <div class="col-sm-6">
+            <p>
+              Made by: <%= product.brand %>
+            </p>
+          </div>
+          <div class="col-sm-6 text-right">
+            <%= link_to "Show", product_path(id: product.id), class: "btn btn-warning" %>
+          </div>
+        </div>
+
         <p>
           <!-- <% product.rating.times do %>
           <span class="glyphicon glyphicon-star yellow"></span>

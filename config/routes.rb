@@ -1,8 +1,20 @@
 Rails.application.routes.draw do
 
 
+<<<<<<< HEAD
   post 'search' => 'searcher#index'
 
+=======
+  post 'add_to_cart' => 'cart#add_to_cart'
+
+  get 'view_order' => 'cart#view_order'
+  get 'empty_cart' => 'cart#empty_cart'
+
+  get 'checkout' => 'cart#checkout'
+
+  resources :orders
+  resources :line_items
+>>>>>>> master
   devise_for :users
   get 'categorical' => 'storefront#items_by_category'
 
