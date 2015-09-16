@@ -18,13 +18,11 @@ body {
   background-size: cover;
   color: white;
 }
-.panel-default {
+.thumbnail {
   background: rgba(255, 255, 255, 0.85);
   color: black;
 }
-// .col-md-4 {
-//   padding: 0;
-// }
-// .panel-default {
-//   margin: 0;
-// }
+.thumbnail a>img, .thumbnail>img {
+  margin-left: 0;
+  margin-right: 0;
+}
