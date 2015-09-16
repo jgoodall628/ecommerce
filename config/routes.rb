@@ -3,9 +3,9 @@ Rails.application.routes.draw do
 
 
   post 'search' => 'searcher#index'
+  post 'order_complete' => 'cart#order_complete'
 
-
-  post 'add_to_cart' => 'cart#add_to_cart'
+  get 'add_to_cart' => 'cart#add_to_cart'
 
   get 'view_order' => 'cart#view_order'
   get 'empty_cart' => 'cart#empty_cart'

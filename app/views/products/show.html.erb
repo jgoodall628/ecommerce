@@ -35,7 +35,7 @@
   <%= @product.category_id %>
 </p>
 <p>
-  <%= form_tag('/add_to_cart') do %>
+  <%= form_tag('/add_to_cart', method: "get") do %>
   <div class="hidden">
     <%= number_field_tag :product_id, @product.id %>
   </div>
