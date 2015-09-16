@@ -44,6 +44,15 @@
             </ul>
           </li>
         </ul>
+        <%= form_tag('/search', class: "navbar-form navbar-left") do %>
+        <div class="form-group">
+
+          <%= text_field_tag :search_term, nil, placeholder: "Search Products", class: "form-control" %>
+        </div>
+        <div class="actions form-group">
+          <%= submit_tag "Search", class: "btn btn-default" %>
+        </div>
+        <% end %>
         <form class="navbar-form navbar-left" role="search">
           <div class="form-group">
             <input type="text" class="form-control" placeholder="Search">

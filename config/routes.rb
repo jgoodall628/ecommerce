@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  post 'search' => 'searcher#index'
+
   devise_for :users
   get 'categorical' => 'storefront#items_by_category'
 
