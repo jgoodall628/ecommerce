@@ -5,5 +5,10 @@ class Product < ActiveRecord::Base
   belongs_to :category
   searchable do
     text :name
+    text :brand
+    text :description
+    text :category do
+      category.name
+    end
   end
 end
