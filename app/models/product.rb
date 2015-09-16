@@ -3,7 +3,7 @@ class Product < ActiveRecord::Base
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
   belongs_to :category
-<<<<<<< HEAD
+
   searchable do
     text :name
     text :brand
@@ -12,8 +12,8 @@ class Product < ActiveRecord::Base
       category.name
     end
   end
-=======
+
   has_many :line_items
 
->>>>>>> master
+
 end

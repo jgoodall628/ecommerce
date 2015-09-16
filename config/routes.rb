@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
 
-<<<<<<< HEAD
+
   post 'search' => 'searcher#index'
 
-=======
+
   post 'add_to_cart' => 'cart#add_to_cart'
 
   get 'view_order' => 'cart#view_order'
@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   resources :orders
   resources :line_items
->>>>>>> master
+
   devise_for :users
   get 'categorical' => 'storefront#items_by_category'
 
