@@ -4,12 +4,8 @@ class SearcherController < ApplicationController
     search_term = params[:search_term]
     @search = Product.search do
       fulltext search_term do
-        if filter_term == "brands"
-          fields(:brand)
-        elsif filter_term == "categories"
-          fields(:category)
-        elsif filter_term == "products"
-          fields(:name)
+        if filter_term != "general"
+          fields(filter_term)
         end
       end
     end

@@ -48,8 +48,8 @@
         <div class="form-group">
 
           <%= text_field_tag :search_term, nil, placeholder: "Search Products", class: "form-control" %>
-          <%= select_tag :filter_term, options_for_select([['General Search','general' ], ["Products", "products"],
-                            ['Brands','brands'], ['Categories', 'categories']]), class: "form-control" %>
+          <%= select_tag :filter_term, options_for_select([['General Search','general' ], ["Products", "name"],
+                            ['Brands','brand'], ['Categories', 'category']]), class: "form-control" %>
         </div>
         <div class="actions form-group">
           <%= submit_tag "Search", class: "btn btn-default" %>
