@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   get 'categorical' => 'storefront#items_by_category'
 
   get 'branding' => "storefront#items_by_brand"
-
+  get 'contact_us' => "storefront#contact_us"
 
   resources :categories
   resources :products

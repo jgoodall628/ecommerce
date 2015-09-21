@@ -1,0 +1,32 @@
+$(document).ready(function (){
+
+  function initialize() {
+    var myLatLng = new google.maps.LatLng(32.782279, -96.797569);
+    var mapOptions = {
+      center: myLatLng,
+      zoom: 15,
+      scrollwheel: false
+    };
+
+    var map = new google.maps.Map(document.getElementById('map-canvas'),
+    mapOptions);
+    var marker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      title: 'Tech Talent South Dallas'
+    });
+    var contentString = '<h2 class="marker">Tech Talent South Dallas</h2>' +
+    '<p class="marker">The one stop shop for all your tech needs!</p>'
+    ;
+
+    var infowindow = new google.maps.InfoWindow({
+      content: contentString
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.open(map, marker);
+    });
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+});

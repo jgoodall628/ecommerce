@@ -13,4 +13,6 @@ class StorefrontController < ApplicationController
     @products = Product.where(brand: @brand)
 
   end
+  def contact_us
+  end
 end
